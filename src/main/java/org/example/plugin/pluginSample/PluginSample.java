@@ -17,6 +17,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerBedEnterEvent;
+import org.bukkit.event.player.PlayerRespawnEvent;
 import org.bukkit.event.player.PlayerToggleSneakEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.FireworkMeta;
@@ -87,6 +88,17 @@ public final class PluginSample extends JavaPlugin implements Listener {
         .forEach(item -> item.setAmount(64));
 
     player.getInventory().setContents(itemStacks);
+
+  }
+
+
+  @EventHandler
+  public void onPlayerRespawn(PlayerRespawnEvent e) {
+//リスポーンしたときに”おかえりなさい！”と表示
+
+    Player player = e.getPlayer();
+    e.getPlayer().sendMessage("おかえりなさい！");
+
 
   }
 
