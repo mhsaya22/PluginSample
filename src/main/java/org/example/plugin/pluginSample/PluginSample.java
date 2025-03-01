@@ -30,7 +30,7 @@ public final class PluginSample extends JavaPlugin implements Listener {
   public void onEnable() {
     Bukkit.getPluginManager().registerEvents(this, this);
   }
-
+//コメントの追加
 
   /**
    * プレイヤーがスニークを開始/終了する際に起動されるイベントハンドラ。
